@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marijana Lazarević — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-logo">Portfolio — 2026</div>
+    <ul class="nav-links">
+      <li><a href="#o-meni">O meni</a></li>
+      <li><a href="#radovi">Radovi</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-line"></div>
+    <div class="hero-bg-text">Design</div>
+    <div class="hero-tag">Dizajner & Developer</div>
+    <h1 class="hero-name">
+      Marijana<br><em>Lazarević.</em>
+    </h1>
+    <p class="hero-subtitle">Web dizajn • Front-end razvoj • UI fokus</p>
+    <div class="hero-scroll">
+      <span>Skroluj</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="me.png" alt="Marijana Lazarević">
+    </div>
+  </section>
+
+  <!-- O meni -->
+  <section class="about" id="o-meni">
+    <div>
+      <div class="about-number">— 01</div>
+      <h2 class="about-label">O<br><em>meni.</em></h2>
+    </div>
+    <div class="about-content">
+      <p class="about-bio">
+        Gradim moderne i pregledne web stranice sa fokusom na korisničko iskustvo,
+        responzivan dizajn i čist vizuelni stil. Trenutno usavršavam front-end development
+        i UI dizajn kroz praktične projekte.
+      </p>
+      <div class="skills-list">
+        <span class="skill-tag">WordPress</span>
+        <span class="skill-tag">Elementor</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">HTML / CSS</span>
+        <span class="skill-tag">Adobe Photoshop</span>
+        <span class="skill-tag">Canva</span>
+        <span class="skill-tag">WooCommerce</span>
+        <span class="skill-tag">UI Design</span>
+      </div>
+      <div class="about-stats">
+        <div>
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Projekata</div>
+        </div>
+        <div>
+          <div class="stat-num">1+</div>
+          <div class="stat-label">Godine iskustva</div>
+        </div>
+        <div>
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Dizajn radova</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Radovi -->
+  <section class="work" id="radovi">
+    <div class="section-header">
+      <div>
+        <div class="section-num">— 02</div>
+        <h2 class="section-title">Moji<br><em>Radovi.</em></h2>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <div class="card" onclick="openModal('wp')">
+        <div class="card-deco"></div>
+        <div>
+          <div class="card-num">01 / WordPress Sajtovi</div>
+          <span class="card-icon">🌐</span>
+          <h3 class="card-title">WordPress Projekti</h3>
+          <p class="card-desc">WordPress projekti sa fokusom na moderan dizajn i pregledno korisničko iskustvo.</p>
+        </div>
+        <div class="card-arrow">
+          <span>Pogledaj projekte</span>
+          <div class="arrow-icon">→</div>
+        </div>
+      </div>
+      <div class="card" onclick="openModal('figma')">
+        <div class="card-deco"></div>
+        <div>
+          <div class="card-num">02 / UI / UX Dizajn</div>
+          <span class="card-icon">✦</span>
+          <h3 class="card-title">Figma Projekti</h3>
+          <p class="card-desc">UI/UX prototipi i dizajnerski koncepti izrađeni u Figmi sa fokusom na moderan i pregledan interfejs.</p>
+        </div>
+        <div class="card-arrow">
+          <span>Pogledaj dizajne</span>
+          <div class="arrow-icon">→</div>
+        </div>
+      </div>
+      <div class="card" onclick="openModal('baneri')">
+        <div class="card-deco"></div>
+        <div>
+          <div class="card-num">03 / Grafički Dizajn</div>
+          <span class="card-icon">◈</span>
+          <h3 class="card-title">Baneri</h3>
+          <p class="card-desc">Dizajn vizuelnog sadržaja za društvene mreže i digitalne platforme.</p>
+        </div>
+        <div class="card-arrow">
+          <span>Pogledaj banere</span>
+          <div class="arrow-icon">→</div>
+        </div>
+      </div>
+      <div class="card" onclick="openModal('frontend')">
+        <div class="card-deco"></div>
+        <div>
+          <div class="card-num">04 / Front-end Razvoj</div>
+          <span class="card-icon">⟨/⟩</span>
+          <h3 class="card-title">Frontend Projekti</h3>
+          <p class="card-desc">Web aplikacije i stranice pisane od nule u HTML-u, CSS-u i JavaScriptu — čist kod i pažljivo izgrađen interfejs.</p>
+        </div>
+        <div class="card-arrow">
+          <span>Pogledaj projekte</span>
+          <div class="arrow-icon">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="kontakt">
+    <div class="footer-name">Marijana Lazarević</div>
+    <div class="footer-contact">
+      <p>Kontaktiraj me</p>
+      <div class="contact-links">
+        <a href="mailto:marijanalazarevic05@gmail.com" class="contact-email">marijanalazarevic05@gmail.com</a>
+        <a href="tel:0654810446" class="contact-email contact-small">065 481 0446</a>
+        <a href="https://www.linkedin.com/in/marijana-lazarevic-60b750384/" target="_blank" class="contact-email contact-small">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
+  <p class="footer-copy">© 2026 Marijana Lazarević. Sva prava zadržana.</p>
+
+
+  <!-- ================================================ -->
+  <!-- MODAL: WordPress -->
+  <!-- ================================================ -->
+  <div class="modal-overlay" id="modal-wp">
+    <div class="modal" style="max-width:1000px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <em>01 / WordPress</em>
+          WordPress Projekti
+        </div>
+        <button class="modal-close" onclick="closeModal('wp')">✕</button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Projekat 1: Amigo Kafa -->
+        <div class="wp-project">
+          <div class="wp-project-header">
+            <h3 class="wp-project-name">Amigo Kafa</h3>
+            <span class="wp-project-type">WooCommerce sajt</span>
+          </div>
+          <p class="wp-project-desc">Sajt za Oxford-Jagodina kafu izrađen u WordPressu. Fokus na jednostavnoj navigaciji, jasnoj prezentaciji proizvoda i brendu kompanije. Dizajn je prilagođen mobilnim uređajima i optimizovan za brzo učitavanje.</p>
+          <div class="wp-tags">
+            <span class="wp-tag">WordPress</span>
+            <span class="wp-tag">Elementor</span>
+            <span class="wp-tag">Responzivan dizajn</span>
+            <span class="wp-tag">Brend identitet</span>
+          </div>
+          <div class="wp-preview">
+            <div class="wp-preview-label">Preview sajta</div>
+            <iframe src="https://kafa.oxford-jagodina.rs/maja/" loading="lazy" title="Amigo Kafa sajt"></iframe>
+            <a href="https://kafa.oxford-jagodina.rs/maja/" target="_blank" class="wp-link">Otvori u novom tabu ↗</a>
+          </div>
+        </div>
+
+        <!-- Projekat 2: Aurora Glow -->
+        <div class="wp-project">
+          <div class="wp-project-header">
+            <h3 class="wp-project-name">Aurora Glow</h3>
+            <span class="wp-project-type">Beauty & Wellness</span>
+          </div>
+          <p class="wp-project-desc">Sajt za beauty brend izrađen u WordPressu sa naglaskom na elegantnom vizuelnom identitetu. Prikazani su tretmani, galerija radova i sistem zakazivanja. Dizajn je minimalistički i sofisticiran, prilagođen ciljnoj grupi.</p>
+          <div class="wp-tags">
+            <span class="wp-tag">WordPress</span>
+            <span class="wp-tag">Elementor</span>
+            <span class="wp-tag">Galerija</span>
+            <span class="wp-tag">UI/UX</span>
+          </div>
+         <div class="slider">
+            <button class="prev">&#10094;</button>
+            <div class="slides">
+            <img src="cetvrtisajt1.png" class="slide active">
+            <img src="cetvrtisajt2.png" class="slide">
+            <img src="cetvrtisajt3.png" class="slide">
+            <img src="cetvrtisajt4.png" class="slide">
+            <img src="makeapp.png" class="slide">
+          </div>
+           <button class="next">&#10095;</button>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+         </div>
+        </div>
+
+        <!-- Projekat 3: Modeling House -->
+        <div class="wp-project">
+          <div class="wp-project-header">
+            <h3 class="wp-project-name">Modeling House</h3>
+            <span class="wp-project-type">Agencijski sajt sa prijavom kandidata</span>
+          </div>
+          <p class="wp-project-desc">Prezentacioni web sajt za modeling agenciju sa informacijama o timu, galerijom sadržaja i sistemom prijave kandidata. Projekat je razvijen sa fokusom na jednostavnu navigaciju, pregledan raspored sadržaja i moderan dizajn.</p>
+          <div class="wp-tags">
+            <span class="wp-tag">WordPress</span>
+            <span class="wp-tag">Elementor</span>
+            <span class="wp-tag">Galerija</span>
+            <span class="wp-tag">UI/UX</span>
+            <span class="wp-tag">User Login</span>
+          </div>
+           <div class="slider">
+            <button class="prev">&#10094;</button>
+            <div class="slides">
+            <img src="modeling_house.jpg" class="slide active">
+            <img src="loginform.jpeg" class="slide">
+            <img src="collectionspages.png" class="slide">
+            <img src="collections.png" class="slide">
+            <img src="aboutusmodeling.png" class="slide">
+          </div>
+           <button class="next">&#10095;</button>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        </div>
+
+        <!-- Projekat 4: Stranica Magije -->
+        <div class="wp-project">
+          <div class="wp-project-header">
+            <h3 class="wp-project-name">Stranica Magije</h3>
+            <span class="wp-project-type">Web platforma za pretragu i kupovinu knjiga</span>
+          </div>
+          <p class="wp-project-desc">Projekat online biblioteke sa funkcijama pretrage knjiga, pregledom sadržaja i korisničkom registracijom za članstvo. Sajt je osmišljen sa fokusom na preglednost, intuitivno korišćenje i jasno organizovan sadržaj.</p>
+          <div class="wp-tags">
+            <span class="wp-tag">WordPress</span>
+            <span class="wp-tag">Elementor</span>
+            <span class="wp-tag">E-commerce</span>
+            <span class="wp-tag">User Login</span>
+            <span class="wp-tag">UI/UX</span>
+          </div>
+           <div class="slider">
+            <button class="prev">&#10094;</button>
+            <div class="slides">
+
+            <img src="homepagebook.png" class=" slide active">
+            <img src="jedankatalog.png" class="slide">
+            <img src="karticaukatalogu.png" class="slide">
+            <img src="kontaktstr.png" class="slide">
+            <img src="uclanjivanje.png" class="slide">
+          </div>
+          <button class="next">&#10095;</button>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Projekat 5: Fitbook -->
+        <div class="wp-project">
+          <div class="wp-project-header">
+            <h3 class="wp-project-name">Fitbook</h3>
+            <span class="wp-project-type">Fitness SaaS platforma</span>
+          </div>
+          <p class="wp-project-desc">SaaS platforma za organizaciju treninga i kreiranje personalizovanih fitness planova. Aplikacija omogućava upravljanje rutinama vežbanja uz fokus na jednostavnost korišćenja i moderan interfejs.</p>
+          <div class="wp-tags">
+            <span class="wp-tag">WordPress</span>
+            <span class="wp-tag">Elementor</span>
+            <span class="wp-tag">Fitness App</span>
+            <span class="wp-tag">User Dashboard</span>
+            <span class="wp-tag">UI/UX</span>
+          </div>
+         <div class="slider">
+            <button class="prev">&#10094;</button>
+            <div class="slides">
+            <img src="homepage.png" class="slide active">
+            <img src="aboutfit.png" class="slide">
+            <img src="plans.png" class="slide">
+            <img src="contactform.png" class="slide">
+            <img src="created.png" class="slide">
+          </div>
+
+          <button class="next">&#10095;</button>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================================================ -->
+  <!-- MODAL: Figma -->
+  <!-- ================================================ -->
+  <div class="modal-overlay" id="modal-figma">
+    <div class="modal" style="max-width:900px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <em>02 / UI/UX Design</em>
+          Figma Projekti
+        </div>
+        <button class="modal-close" onclick="closeModal('figma')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-intro">Dizajni iz Figme — wireframes, prototipovi i UI ekrani. Klikni na projekat da vidis slike.</p>
+        <div class="figma-grid">
+
+          <div class="figma-item" onclick="toggleGallery('fig1')">
+            <div class="figma-icon">🍪</div>
+            <div class="figma-name">Navxtox — Cookies & Cake</div>
+            <div class="figma-desc">Klikni da vidis slike projekta</div>
+            <div class="figma-gallery" id="fig1">
+              <img src="cookies1.png" alt="Cookies & Cake 1">
+              <img src="cookies2.png" alt="Cookies & Cake 2">
+              <img src="cookies3.png" alt="Cookies & Cake 3">
+              <img src="cookies4.png" alt="Cookies & Cake 4">
+              <img src="cookies5.png" alt="Cookies & Cake 5">
+              <img src="cookies6.png" alt="Cookies & Cake 6">
+              <img src="cookies7.png" alt="Cookies & Cake 7">
+            </div>
+          </div>
+
+          <div class="figma-item" onclick="toggleGallery('fig2')">
+            <div class="figma-icon">🚗</div>
+            <div class="figma-name">Car</div>
+            <div class="figma-desc">Klikni da vidis slike projekta</div>
+            <div class="figma-gallery" id="fig2">
+              <img src="homepage_car.png" alt="Car homepage">
+              <img src="page_car.png" alt="Car page">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================================================ -->
+  <!-- MODAL: Baneri -->
+  <!-- ================================================ -->
+  <div class="modal-overlay" id="modal-baneri">
+    <div class="modal" style="max-width:900px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <em>03 / Grafički Dizajn</em>
+          Baneri
+        </div>
+        <button class="modal-close" onclick="closeModal('baneri')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-intro">Klikni na baner da vidis slike.</p>
+        <div class="banners-grid">
+
+          <div class="banner-item" onclick="toggleGallery('ban1')">
+            <div class="banner-top">
+              <div class="banner-info">
+                <div class="banner-name">Promotivni banner za brend sladoleda</div>
+                <div class="banner-desc">Banner dizajniran za promociju popusta na sladoled, sa toplim tonovima i jasnim vizuelnim fokusom na ponudu i preglednost sadržaja.</div>
+              </div>
+              <div class="banner-arrow">↓</div>
+            </div>
+            <div class="figma-gallery" id="ban1">
+              <img src="banner_icecream.jpg" alt="Ice cream banner">
+            </div>
+          </div>
+
+          <div class="banner-item" onclick="toggleGallery('ban2')">
+            <div class="banner-top">
+              <div class="banner-info">
+                <div class="banner-name">Promotivni banner za brend čokoladnog sladoleda</div>
+                <div class="banner-desc">Banner dizajniran za promociju čokoladnog sladoleda, sa fokusom na toplu estetiku i vizuelno isticanje proizvoda.</div>
+              </div>
+              <div class="banner-arrow">↓</div>
+            </div>
+            <div class="figma-gallery" id="ban2">
+              <img src="chocolate_icecream.png" alt="Chocolate ice cream banner">
+            </div>
+          </div>
+
+          <div class="banner-item" onclick="toggleGallery('ban3')">
+            <div class="banner-top">
+              <div class="banner-info">
+                <div class="banner-name">Fashion promotional banner</div>
+                <div class="banner-desc">Promotivni vizual za fashion brend, dizajniran sa fokusom na modernu estetiku i vizuelnu eleganciju.</div>
+              </div>
+              <div class="banner-arrow">↓</div>
+            </div>
+            <div class="figma-gallery" id="ban3">
+              <img src="instagram_post.png" alt="Fashion banner">
+            </div>
+          </div>
+
+          <div class="banner-item" onclick="toggleGallery('ban4')">
+            <div class="banner-top">
+              <div class="banner-info">
+                <div class="banner-name">Fashion campaign banner</div>
+                <div class="banner-desc">Banner dizajniran za promociju modne kampanje sa fokusom na vizuelnu harmoniju, tipografiju i estetski čist izgled.</div>
+              </div>
+              <div class="banner-arrow">↓</div>
+            </div>
+            <div class="figma-gallery" id="ban4">
+              <img src="fashion_banner.png" alt="Fashion campaign banner">
+            </div>
+          </div>
+
+          <div class="banner-item" onclick="toggleGallery('ban5')">
+            <div class="banner-top">
+              <div class="banner-info">
+                <div class="banner-name">Perfume brand launch banner</div>
+                <div class="banner-desc">Promotivni banner za novo lansirani parfemski brend, kreiran sa fokusom na luksuznu i elegantnu estetiku.</div>
+              </div>
+              <div class="banner-arrow">↓</div>
+            </div>
+            <div class="figma-gallery" id="ban5">
+              <img src="NEW_Parfum.png" alt="Perfume banner">
+            </div>
+          </div>
+
+          <div class="banner-item" onclick="toggleGallery('ban6')">
+            <div class="banner-top">
+              <div class="banner-info">
+                <div class="banner-name">Cream brand promotional design</div>
+                <div class="banner-desc">Vizual za promociju novo otvorenog brenda krema, dizajniran sa fokusom na čistoću, nežne tonove i minimalističku estetiku.</div>
+              </div>
+              <div class="banner-arrow">↓</div>
+            </div>
+            <div class="figma-gallery" id="ban6">
+              <img src="skincare.png" alt="Skincare banner">
+            </div>
+          </div>
+
+          <div class="banner-item" onclick="toggleGallery('ban7')">
+            <div class="banner-top">
+              <div class="banner-info">
+                <div class="banner-name">Summer vacation banner</div>
+                <div class="banner-desc">Promotivni banner za letovanje, dizajniran da prenese osećaj odmora, topline i putovanja kroz dinamičnu kompoziciju.</div>
+              </div>
+              <div class="banner-arrow">↓</div>
+            </div>
+            <div class="figma-gallery" id="ban7">
+              <img src="travel.png" alt="Travel banner">
+            </div>
+          </div>
+
+          <div class="banner-item" onclick="toggleGallery('ban8')">
+            <div class="banner-top">
+              <div class="banner-info">
+                <div class="banner-name">Travel discount banner – Sweden</div>
+                <div class="banner-desc">Promotivni vizual za popust na putovanje u Švedsku, sa fokusom na jasnu komunikaciju ponude i atraktivnu prezentaciju destinacije.</div>
+              </div>
+              <div class="banner-arrow">↓</div>
+            </div>
+            <div class="figma-gallery" id="ban8">
+              <img src="sweden.png" alt="Sweden banner">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================ -->
+  <!-- MODAL: Frontend -->
+  <!-- ================================================ -->
+  <div class="modal-overlay" id="modal-frontend">
+    <div class="modal" style="max-width:1000px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <em>04 / Front-end Razvoj</em>
+          Frontend Projekti
+        </div>
+        <button class="modal-close" onclick="closeModal('frontend')">✕</button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Projekat: Biblioteka -->
+        <div class="wp-project">
+          <div class="wp-project-header">
+            <h3 class="wp-project-name">Online Biblioteka</h3>
+            <span class="wp-project-type">Frontend Web App</span>
+          </div>
+          <p class="wp-project-desc">Interaktivna web aplikacija za pretragu i prikaz knjiga, izgrađena od nule pomoću HTML-a, CSS-a i JavaScripta. Fokus na preglednom UI-u, intuitivnoj navigaciji i čistoj prezentaciji sadržaja.</p>
+          <div class="wp-tags">
+            <span class="wp-tag">HTML</span>
+            <span class="wp-tag">CSS</span>
+            <span class="wp-tag">JavaScript</span>
+            <span class="wp-tag">Responzivan dizajn</span>
+            <span class="wp-tag">UI/UX</span>
+          </div>
+          <div class="wp-preview">
+            <div class="wp-preview-label">Preview projekta</div>
+            <iframe src="https://marijanaa05.github.io/biblioteka_project/" loading="lazy" title="Online Biblioteka projekat"></iframe>
+            <a href="https://marijanaa05.github.io/biblioteka_project/" target="_blank" class="wp-link">Otvori u novom tabu ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="scripte.js"></script>
+</body>
+</html>
