@@ -63,7 +63,6 @@ if (hamburger && navLinks) {
     document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
   });
 
-  // Zatvori meni klikom na link
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
@@ -71,7 +70,16 @@ if (hamburger && navLinks) {
       document.body.style.overflow = '';
     });
   });
-} 
+
+  // Klik van menija zatvara ga
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+}
 
 
 // ─────────────────────────────────────────────
