@@ -93,6 +93,36 @@ nav {
 }
 .nav-links a:hover::after { width: 100%; }
 
+/* ── Hamburger (sakriven na desktopu) ──────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--white);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ── Hero ──────────────────────────────────────── */
 .hero {
   min-height: 100vh;
@@ -386,7 +416,6 @@ nav {
   border: 1px solid rgba(245,244,240,0.12);
 }
 
-/* Rub koji se puni bojom odozdo */
 .card::before {
   content: '';
   position: absolute;
@@ -400,7 +429,6 @@ nav {
 .card:hover::before { transform: scaleY(1); }
 .card:hover { color: var(--black); border-color: transparent; }
 
-/* Ugaoni ukras — gornji desni */
 .card::after {
   content: '';
   position: absolute;
@@ -418,7 +446,6 @@ nav {
 
 .card > * { position: relative; z-index: 1; }
 
-/* Broj kartice */
 .card-num {
   font-family: 'Space Mono', monospace;
   font-size: 0.6rem;
@@ -428,7 +455,6 @@ nav {
 }
 .card:hover .card-num { color: rgba(10,10,10,0.4); }
 
-/* Ikona sa okvirom */
 .card-icon {
   font-size: 1.4rem;
   margin: 2rem 0 1.5rem;
@@ -463,7 +489,6 @@ nav {
 }
 .card:hover .card-desc { color: rgba(10,10,10,0.6); }
 
-/* Donji deo kartice */
 .card-arrow {
   display: flex;
   align-items: center;
@@ -500,7 +525,6 @@ nav {
   transform: rotate(45deg);
 }
 
-/* Linija ukrasa pri dnu kartice (leva strana) */
 .card-deco {
   position: absolute;
   bottom: 0; left: 0;
@@ -647,7 +671,6 @@ nav {
   color: var(--gray);
 }
 
-/* WP iframe preview */
 .wp-preview {
   margin-top: 1.5rem;
 }
@@ -684,7 +707,6 @@ nav {
 }
 .wp-link:hover { color: var(--white); border-color: var(--white); }
 
-/* WP image placeholder */
 .wp-images-placeholder {
   margin-top: 1.5rem;
   padding: 2rem;
@@ -733,7 +755,6 @@ nav {
   margin-bottom: 1rem;
 }
 
-/* Shared gallery (Figma + Baneri) */
 .figma-gallery {
   display: none;
   width: 100%;
@@ -885,63 +906,40 @@ footer {
   .contact-links { align-items: flex-start; }
   .hero-scroll { right: 2rem; }
   .about-stats { grid-template-columns: repeat(2, 1fr); }
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    z-index: 200;
-  }
-  .hamburger span{
-    display: block;
-    width: 24px;
-    height: 1px;
-    background: var(--white);
-    transition: tranform 0.3s ease, opacity 0.3s ease;
-  }
 
-  /* Animacija u X */
-  .hamburger.open span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.open span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
-}
-@media (max-width: 900px) {
-  .hamburger {display: flex;}
+  /* Hamburger vidljiv samo na mobilnom */
+  .hamburger { display: flex; }
 
+  /* Nav linkovi — mobilni meni koji klizi s desne strane */
   .nav-links {
     position: fixed;
-    top: 0; right: -100;
+    top: 0;
+    right: -100%;
     width: 70%;
     height: 100vh;
     background: var(--black);
-    flex-direction: colimn;
-    justify-content: ccenter;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 3rem;
     transition: right 0.4s cubic-bezier(0.76, 0, 0.24, 1);
     z-index: 150;
     border-left: 1px solid rgba(245,244,240,0.1);
+    opacity: 1;
+    animation: none;
   }
 
-  .nav-links.open{
+  .nav-links.open {
     right: 0;
   }
+
   .nav-links a {
     font-size: 0.9rem;
     letter-spacing: 0.2em;
   }
 }
-}
 
+/* ── Slider ─────────────────────────────────────── */
 .slider {
   position: relative;
   width: 600px;
