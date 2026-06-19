@@ -49,6 +49,30 @@ document.querySelectorAll('a, button, .card, .figma-item, .banner-item')
     });
   });
 
+ // ─────────────────────────────────────────────
+// HAMBURGER MENU
+// ─────────────────────────────────────────────
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  });
+
+  // Zatvori meni klikom na link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+} 
+
 
 // ─────────────────────────────────────────────
 // MODALS
