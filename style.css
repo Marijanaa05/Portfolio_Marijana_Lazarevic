@@ -536,28 +536,6 @@ nav {
 .card:hover .card-deco { width: 100%; }
 
 
-.skills-category {
-    margin-bottom: 35px;
-}
-
-.skills-category h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.skills-divider {
-    width: 60px;
-    height: 3px;
-    background: #2563eb;
-    margin-bottom: 18px;
-}
-
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
 /* ── Modal ─────────────────────────────────────── */
 .modal-overlay {
