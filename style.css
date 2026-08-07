@@ -1000,3 +1000,66 @@ button.next {
 .dot.active {
   background: black;
 }
+.novosti-section {
+  padding: 60px 20px;
+  background-color: #0a0a0a;
+}
+
+.novosti-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.novosti-naslov {
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 40px;
+  color: var(--white);
+}
+
+.novosti-video-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.novosti-video {
+  flex: 1 1 400px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.novosti-opis {
+  flex: 1 1 300px;
+}
+
+.novosti-opis h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.novosti-opis p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.novosti-datum {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  .novosti-video-wrapper {
+    flex-direction: column;
+  }
+}
