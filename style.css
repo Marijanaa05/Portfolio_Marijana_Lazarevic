@@ -567,7 +567,6 @@ nav {
   transform: translateY(40px);
   transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
 }
-
 .modal-overlay.active .modal { transform: translateY(0); }
 
 .modal-header {
