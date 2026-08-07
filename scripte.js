@@ -203,3 +203,20 @@ document.querySelectorAll('.card, .about-stats, .skills-list')
     el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
     observer.observe(el);
   });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.querySelector('.novosti-video');
+
+  if(video) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          video.pause();
+        }
+      });
+    }, ( threshold: 0.3 });
+
+   observer.observe(video);
+  }
+});
+    
