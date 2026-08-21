@@ -1007,8 +1007,12 @@ button.next {
 .novosti-container {
   max-width: 1000px;
   margin: 0 auto;
-}
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
 .novosti-naslov {
   text-align: center;
   font-size: 2rem;
